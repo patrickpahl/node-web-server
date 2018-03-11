@@ -1,9 +1,11 @@
 // server.js
 // Where we'll configure routes and pages
+// In package.json, "start": "node server.js" start will begin the app... Now use 'npm start'
 
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.env.PORT || 3000; // process.env store env as key value pairs
 
 var app = express();
 
@@ -67,8 +69,8 @@ app.get('/bad', (req, res) =>   {
 
 
 //app.listen binds the application to a port on our machine
-app.listen(3000, () => {
-  console.log('Server is up on port 3000');
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
 });
 
 //*Terminal: 'node server.js' to start listening
