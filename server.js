@@ -5,8 +5,8 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
-//const port = process.env.PORT || 3000; // process.env store env as key value pairs
-const port = 3000
+const port = process.env.PORT || 3000; // process.env store env as key value pairs
+//const port = 3000 // FOR TESTING LOCALLY
 
 var app = express();
 
