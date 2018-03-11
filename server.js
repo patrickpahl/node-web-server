@@ -5,7 +5,8 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
-const port = process.env.PORT || 3000; // process.env store env as key value pairs
+//const port = process.env.PORT || 3000; // process.env store env as key value pairs
+const port = 3000
 
 var app = express();
 
@@ -65,6 +66,12 @@ app.get('/bad', (req, res) =>   {
   res.send({
     errorMessage: 'Unable to process the request'
   });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects'
+  })
 });
 
 
